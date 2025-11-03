@@ -15,10 +15,11 @@
             const user = document.getElementById('username').value;
             const pass = document.getElementById('password').value;
             const message = document.getElementById('message');
-      
-
+            const offset = 5;
+            const encodedCodes = [70, 90, 75, 87, 79, 85, 90, 88];
+            
             const validUser = "student";
-            const validPass = "AUFRJPUS";
+            const validPass = String.fromCharCode(...encodedCodes.map(code => code - offset));
       
             if (user === validUser && pass === validPass) {
               message.style.color = "green";
